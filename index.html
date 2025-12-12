@@ -82,6 +82,57 @@
             color: #555;
             margin: 30px 0 20px;
         }
+        /* 神人排行榜 */
+.rank-section { margin-top: 40px; }
+.rank-list { display: flex; flex-direction: column; gap: 12px; }
+
+.rank-item{
+  background:#fff;
+  border-radius:12px;
+  padding:14px 16px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+.rank-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#ffe5f1;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.rank-name{ font-size:18px; font-weight:bold; margin:0; }
+.rank-sub{ margin:6px 0 0; color:#555; font-size:14px; }
+
+/* 折叠展开：details/summary */
+details { margin-top:10px; }
+summary{
+  cursor:pointer;
+  list-style:none;
+  display:inline-block;
+  background:#0366d6;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:14px;
+}
+summary::-webkit-details-marker{ display:none; }
+.reason{
+  margin-top:10px;
+  background:#f6f8fa;
+  border-radius:10px;
+  padding:10px 12px;
+  color:#333;
+  line-height:1.6;
+}
     </style>
 </head>
 <body>
@@ -132,6 +183,72 @@
             </ul>
         </div>
     </div>
+
+<section class="rank-section">
+  <h2>神人排行榜 🏆</h2>
+
+  <div class="rank-list">
+
+    <!-- Top 1 -->
+    <div class="rank-item">
+      <div class="rank-top">
+        <div>
+          <span class="badge">TOP 1</span>
+          <p class="rank-name">神人A（改名字）</p>
+          <p class="rank-sub">一句话简介（可选：比如 “嘴硬王者”）</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>查看入围理由</summary>
+        <div class="reason">
+          这里写入围理由的正文。你之后想改，就改这一段文字就行。<br>
+          可以写多行，写得越离谱越好😂
+        </div>
+      </details>
+    </div>
+
+    <!-- Top 2 -->
+    <div class="rank-item">
+      <div class="rank-top">
+        <div>
+          <span class="badge">TOP 2</span>
+          <p class="rank-name">神人B</p>
+          <p class="rank-sub">比如：迟到但很理直气壮</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>查看入围理由</summary>
+        <div class="reason">
+          入围理由写在这里：<br>
+          ① ……<br>
+          ② ……<br>
+          ③ ……
+        </div>
+      </details>
+    </div>
+
+    <!-- Top 3 -->
+    <div class="rank-item">
+      <div class="rank-top">
+        <div>
+          <span class="badge">TOP 3</span>
+          <p class="rank-name">神人C</p>
+          <p class="rank-sub">比如：情绪稳定（假的）</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>查看入围理由</summary>
+        <div class="reason">
+          写理由写理由写理由……（你自己改）
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
 
 <footer>
     本网站纯属搞笑，如有雷同，说明我们真的太沙雕了。😎
